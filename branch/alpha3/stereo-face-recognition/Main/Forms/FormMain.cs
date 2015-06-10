@@ -66,10 +66,10 @@ namespace FaceDetection.Forms
         {
             try
             {
-                _capture1 = new Capture(0);
-                _capture2 = new Capture(1);
+                _capture1 = new Capture(1);
+                _capture2 = new Capture(2);
 
-                OnResolutionMenuItemClick(resolutionToolStripMenuItem.DropDownItems[0], EventArgs.Empty);
+                OnResolutionMenuItemClick(resolutionToolStripMenuItem.DropDownItems[1], EventArgs.Empty);
             }
             catch (NullReferenceException excpt)
             {
@@ -275,8 +275,16 @@ namespace FaceDetection.Forms
             var leftImageR = new Image<Gray, byte>(_cameras[0].Image.Width, _cameras[0].Image.Height);
             var rightImageR = new Image<Gray, byte>(_cameras[1].Image.Width, _cameras[1].Image.Height);
 
-            CvInvoke.cvRemap(_cameras[0].Image.Ptr, leftImageR.Ptr,
-                stereoCalibration.MapXLeft, stereoCalibration.MapYLeft, 0, new MCvScalar(0));
+            try
+            {
+                CvInvoke.cvRemap(_cameras[0].Image.Ptr, leftImageR.Ptr,
+                    stereoCalibration.MapXLeft, stereoCalibration.MapYLeft, 0, new MCvScalar(0));
+
+            }
+            catch (Exception ex)
+            {
+                
+            }
 
             CvInvoke.cvRemap(_cameras[1].Image.Ptr, rightImageR.Ptr,
                 stereoCalibration.MapXRight, stereoCalibration.MapYRight, 0, new MCvScalar(0));
@@ -519,9 +527,7 @@ namespace FaceDetection.Forms
                 {
                     Invoke(new Action(Application.DoEvents));
                 }
-// ReSharper disable EmptyGeneralCatchClause
-                catch
-// ReSharper restore EmptyGeneralCatchClause
+                catch(Exception ex)
                 {
                 }
             }
@@ -638,5 +644,10 @@ namespace FaceDetection.Forms
         }
 
         #endregion
+
+        private void resolutionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

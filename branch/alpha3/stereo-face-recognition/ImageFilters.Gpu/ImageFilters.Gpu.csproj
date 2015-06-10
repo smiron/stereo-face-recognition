@@ -41,16 +41,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Emgu.CV, Version=2.4.0.1717, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <HintPath>..\..\Libs\EMGU240x64\Emgu.CV.dll</HintPath>
+      <HintPath>..\..\..\..\Libs\EMGU240x64\Emgu.CV.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.GPU, Version=2.4.0.1717, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <HintPath>..\..\Libs\EMGU240x64\Emgu.CV.GPU.dll</HintPath>
+      <HintPath>..\..\..\..\Libs\EMGU240x64\Emgu.CV.GPU.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.UI, Version=2.4.0.1717, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <HintPath>..\..\Libs\EMGU240x64\Emgu.CV.UI.dll</HintPath>
+      <HintPath>..\..\..\..\Libs\EMGU240x64\Emgu.CV.UI.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.Util, Version=2.4.0.1717, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <HintPath>..\..\Libs\EMGU240x64\Emgu.Util.dll</HintPath>
+      <HintPath>..\..\..\..\Libs\EMGU240x64\Emgu.Util.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

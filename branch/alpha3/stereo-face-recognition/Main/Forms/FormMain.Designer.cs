@@ -28,19 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.imageBoxCamera = new Emgu.CV.UI.ImageBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.nudRightRoll = new System.Windows.Forms.NumericUpDown();
-            this.nudLeftRoll = new System.Windows.Forms.NumericUpDown();
-            this.nudFacePitch = new System.Windows.Forms.NumericUpDown();
-            this.nudFaceYaw = new System.Windows.Forms.NumericUpDown();
-            this.nudFaceRoll = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nudRightRoll = new System.Windows.Forms.NumericUpDown();
+            this.nudFaceRoll = new System.Windows.Forms.NumericUpDown();
+            this.nudLeftRoll = new System.Windows.Forms.NumericUpDown();
+            this.nudFaceYaw = new System.Windows.Forms.NumericUpDown();
+            this.nudFacePitch = new System.Windows.Forms.NumericUpDown();
+            this.imageBoxPoints = new Emgu.CV.UI.ImageBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,21 +63,18 @@
             this.findFacesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.imageBoxPoints = new Emgu.CV.UI.ImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageBoxCamera)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRightRoll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLeftRoll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFacePitch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFaceYaw)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFaceRoll)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRightRoll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFaceRoll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLeftRoll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFaceYaw)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFacePitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBoxPoints)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageBoxCamera
@@ -110,6 +111,48 @@
             this.panel1.Size = new System.Drawing.Size(778, 263);
             this.panel1.TabIndex = 3;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.imageBoxPoints, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(778, 263);
+            this.tableLayoutPanel2.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.nudRightRoll);
+            this.panel2.Controls.Add(this.nudFaceRoll);
+            this.panel2.Controls.Add(this.nudLeftRoll);
+            this.panel2.Controls.Add(this.nudFaceYaw);
+            this.panel2.Controls.Add(this.nudFacePitch);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(383, 257);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Face Roll (X Axis - Eyes Angle)";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -119,6 +162,15 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Right Face Angle";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Face Yaw (Z Axis - Eyes Angle)";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -127,6 +179,15 @@
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Left Face Angle";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(215, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Face Pitch (Angle between face and mouth)";
             // 
             // nudRightRoll
             // 
@@ -153,6 +214,31 @@
             this.nudRightRoll.TabIndex = 11;
             this.nudRightRoll.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // nudFaceRoll
+            // 
+            this.nudFaceRoll.DecimalPlaces = 2;
+            this.nudFaceRoll.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.nudFaceRoll.Location = new System.Drawing.Point(224, 8);
+            this.nudFaceRoll.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudFaceRoll.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.nudFaceRoll.Name = "nudFaceRoll";
+            this.nudFaceRoll.ReadOnly = true;
+            this.nudFaceRoll.Size = new System.Drawing.Size(120, 20);
+            this.nudFaceRoll.TabIndex = 7;
+            this.nudFaceRoll.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // nudLeftRoll
             // 
             this.nudLeftRoll.DecimalPlaces = 2;
@@ -177,31 +263,6 @@
             this.nudLeftRoll.Size = new System.Drawing.Size(120, 20);
             this.nudLeftRoll.TabIndex = 10;
             this.nudLeftRoll.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudFacePitch
-            // 
-            this.nudFacePitch.DecimalPlaces = 2;
-            this.nudFacePitch.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.nudFacePitch.Location = new System.Drawing.Point(224, 60);
-            this.nudFacePitch.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudFacePitch.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.nudFacePitch.Name = "nudFacePitch";
-            this.nudFacePitch.ReadOnly = true;
-            this.nudFacePitch.Size = new System.Drawing.Size(120, 20);
-            this.nudFacePitch.TabIndex = 9;
-            this.nudFacePitch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // nudFaceYaw
             // 
@@ -228,57 +289,40 @@
             this.nudFaceYaw.TabIndex = 8;
             this.nudFaceYaw.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // nudFaceRoll
+            // nudFacePitch
             // 
-            this.nudFaceRoll.DecimalPlaces = 2;
-            this.nudFaceRoll.Increment = new decimal(new int[] {
+            this.nudFacePitch.DecimalPlaces = 2;
+            this.nudFacePitch.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.nudFaceRoll.Location = new System.Drawing.Point(224, 8);
-            this.nudFaceRoll.Maximum = new decimal(new int[] {
+            this.nudFacePitch.Location = new System.Drawing.Point(224, 60);
+            this.nudFacePitch.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nudFaceRoll.Minimum = new decimal(new int[] {
+            this.nudFacePitch.Minimum = new decimal(new int[] {
             1000,
             0,
             0,
             -2147483648});
-            this.nudFaceRoll.Name = "nudFaceRoll";
-            this.nudFaceRoll.ReadOnly = true;
-            this.nudFaceRoll.Size = new System.Drawing.Size(120, 20);
-            this.nudFaceRoll.TabIndex = 7;
-            this.nudFaceRoll.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudFacePitch.Name = "nudFacePitch";
+            this.nudFacePitch.ReadOnly = true;
+            this.nudFacePitch.Size = new System.Drawing.Size(120, 20);
+            this.nudFacePitch.TabIndex = 9;
+            this.nudFacePitch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label3
+            // imageBoxPoints
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(215, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Face Pitch (Angle between face and mouth)";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Face Yaw (Z Axis - Eyes Angle)";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Face Roll (X Axis - Eyes Angle)";
+            this.imageBoxPoints.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imageBoxPoints.Location = new System.Drawing.Point(392, 3);
+            this.imageBoxPoints.Name = "imageBoxPoints";
+            this.imageBoxPoints.Size = new System.Drawing.Size(383, 257);
+            this.imageBoxPoints.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageBoxPoints.TabIndex = 2;
+            this.imageBoxPoints.TabStop = false;
             // 
             // menuStrip1
             // 
@@ -387,6 +431,7 @@
             this.resolutionToolStripMenuItem.Name = "resolutionToolStripMenuItem";
             this.resolutionToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.resolutionToolStripMenuItem.Text = "Resolution";
+            this.resolutionToolStripMenuItem.Click += new System.EventHandler(this.resolutionToolStripMenuItem_Click);
             // 
             // stereoCalibrateToolStripMenuItem
             // 
@@ -423,49 +468,6 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.OnAboutToolStripMenuItemClick);
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.imageBoxPoints, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(778, 263);
-            this.tableLayoutPanel2.TabIndex = 14;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.nudRightRoll);
-            this.panel2.Controls.Add(this.nudFaceRoll);
-            this.panel2.Controls.Add(this.nudLeftRoll);
-            this.panel2.Controls.Add(this.nudFaceYaw);
-            this.panel2.Controls.Add(this.nudFacePitch);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(383, 257);
-            this.panel2.TabIndex = 0;
-            // 
-            // imageBoxPoints
-            // 
-            this.imageBoxPoints.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imageBoxPoints.Location = new System.Drawing.Point(392, 3);
-            this.imageBoxPoints.Name = "imageBoxPoints";
-            this.imageBoxPoints.Size = new System.Drawing.Size(383, 257);
-            this.imageBoxPoints.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageBoxPoints.TabIndex = 2;
-            this.imageBoxPoints.TabStop = false;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,17 +484,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBoxCamera)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudRightRoll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLeftRoll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFacePitch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFaceYaw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFaceRoll)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRightRoll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFaceRoll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLeftRoll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFaceYaw)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFacePitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBoxPoints)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
